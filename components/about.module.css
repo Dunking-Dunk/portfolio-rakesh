@@ -1,0 +1,61 @@
+.about {
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0rem;
+}
+
+.about__container {
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: 1fr 2fr;
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.about__name {
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+    max-width: 30rem;
+}
+
+.about__title {
+    font-weight: 700;
+    font-size: 7rem;
+
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about__para {
+    font-size: 2rem;
+    font-weight: 400;
+
+    line-height: 3rem;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    gap: 5rem;
+}
+
+.about__social__link {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary-color);
+}

@@ -1,0 +1,16 @@
+.hover {
+    width: 10rem;
+    height: 10rem;   
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    align-items: center;
+justify-content: center;
+pointer-events: none;
+}
+
+.hover__text {
+    color: var(--white-primary);
+}

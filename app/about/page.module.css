@@ -1,0 +1,144 @@
+.about {
+    padding: 0 8rem;
+    width: 100%;
+    height: 100%;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__cards {
+    margin: 5rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.card {
+    padding:0rem 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+.card__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black-secondary);
+}
+
+.card__para {
+    color: var(--black-500);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+.about__detail__container {
+    margin: 8rem 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.about__header {
+    font-size: 4rem;
+    background:var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 35rem;
+    margin-bottom: 5rem;
+}
+
+.about__work__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail__card {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 0.1rem solid var(--black-secondary);
+}
+
+.detail__card__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--black-primary);
+}
+
+.detail__card__para {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black-secondary);
+}
+
+.detail__card__date {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black-500);
+}
+.detail__card__date::before {
+    content: '. ';
+    font-size: 5rem;
+}
+
+.follow__container {
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem
+}
+
+.follow__img {
+    width: 50rem;
+    height: 60rem;
+    filter: grayscale(100%) contrast(100%) grayscale(100%);
+}
+
+.follow {
+    background-color: var(--black-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 60%;
+}
+
+
+.follow__title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 25rem;
+}
+
+.follow__para {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+   color: var(--white-primary);
+   border-bottom: 0.1rem solid var(--white-primary);
+}
