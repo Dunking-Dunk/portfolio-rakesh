@@ -50,3 +50,10 @@
     font-size: 1.5rem;
     color: var(--black-500);
 }
+
+
+@media screen and (max-width: 750px) {
+    .card__testimonial {
+        font-size: 2rem;
+    }
+}

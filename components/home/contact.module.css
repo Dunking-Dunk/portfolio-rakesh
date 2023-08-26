@@ -82,3 +82,9 @@
     color: var(--primary-color);
 }
 
+
+@media screen and (max-width: 750px) { 
+    .contact__container {
+        grid-template-columns: auto;
+    }
+}

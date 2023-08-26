@@ -1,5 +1,5 @@
 import styles from "./testimonial.module.css";
-import Carousel  from "./carousel/Carousel";
+import Carousel  from "../carousel/Carousel";
 
 
 const testimonials = [

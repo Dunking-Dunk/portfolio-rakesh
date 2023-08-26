@@ -4,11 +4,15 @@
     border-radius: 50%;
     background: var(--primary-gradient);
     z-index: 10;
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
 justify-content: center;
+left: 0;
+right: 0;
+transform: translate(-50%,-50%);
 pointer-events: none;
+
 }
 
 .hover__text {

@@ -1,20 +1,34 @@
 import styles from './page.module.css'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Project from '../components/Project'
-import Skill from '../components/Skill'
-import Testimonial from '../components/Testimonial'
-import Contact from '../components/Contact'
+import Hero from '@/components/home/Hero'
+import About from '@/components/home/About'
+import Project from '@/components/home/Project'
+import Testimonial from '@/components/home/Testimonial'
+import Contact from '@/components/home/Contact'
+import {client} from '@/lib/client'
+import { groq } from 'next-sanity'
+import ScrollAnimation from '@/components/ScrollAnimation/ScrollAnimation'
 
-export default function Home() {
+const query = groq`
+  *[_type=='author'][0]
+`
+
+export default async function  Home() {
+  const author = await client.fetch(query)
+
   return (
     <div className={styles.home}>
       <div className={styles.home__container}>
-        <Hero />
-        <Project/>
+        <ScrollAnimation>
+          <Hero data={author} />
+        </ScrollAnimation>
+        <Project />
+        <ScrollAnimation>
         <About />
+        </ScrollAnimation>
         <Testimonial />
-        <Contact/>
+        <ScrollAnimation>
+        <Contact  />
+        </ScrollAnimation>
       </div>
 </div>
   )

@@ -1,0 +1,30 @@
+.card {
+  
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--black-primary);
+}
+
+.title::before  {
+    content: '. ';
+    font-size: 4rem;
+}
+
+.author {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--black-secondary);
+}
+
+@media screen and (max-width: 750px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .author {
+        font-size: 2rem;
+    }
+}

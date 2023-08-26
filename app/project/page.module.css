@@ -1,0 +1,32 @@
+.project {
+    width: 100%;
+    height: 100%;
+}
+
+.project__container {
+    padding: 5rem 8rem;
+    width: 100%;
+    height: 100%;
+}
+
+.project__title {
+font-size: 5rem;
+background: var(--primary-gradient);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 600;
+max-width: 40rem;
+margin-bottom: 4rem;
+}
+
+.project__projects__container { 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    .project__container {
+        padding: 5rem 4rem;
+    }
+}

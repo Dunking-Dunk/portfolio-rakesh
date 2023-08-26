@@ -1,0 +1,40 @@
+.body__h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    padding: 4rem 0rem;
+}
+
+.body__h2 {
+    font-size: 5rem;
+    font-weight: 600;
+    padding: 4rem 0rem;
+}
+
+.body__h3 {
+    font-size: 4em;
+    font-weight: 500;
+    padding: 3rem 0rem;
+}
+
+.body__h4 {
+    font-size: 5rem;
+    font-weight: 400;
+    padding: 2rem 0rem;
+}
+
+.body__normal {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.body__img__container {
+    width: 100%;
+    margin: 10rem 0rem;
+    min-height: 60rem;
+    position: relative;
+}
+
+.body__img {
+    object-fit: contain;
+}

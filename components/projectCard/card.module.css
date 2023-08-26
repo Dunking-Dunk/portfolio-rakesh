@@ -50,3 +50,9 @@
 .project__card:hover .project__detail__container{
     transform: translateY(calc(-100% - 5rem)) ;
 }
+
+@media screen and (max-width: 750px) {
+    .project__detail__container {
+        bottom:  5rem;
+    }
+}

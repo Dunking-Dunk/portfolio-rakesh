@@ -25,3 +25,14 @@
     color: var(--white-primary);
     cursor: pointer;
 }
+
+@media screen and (max-width: 750px) {
+    .skills {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .skills__container {
+        background: repeating-radial-gradient(var(--black-500) 0.2rem, var(--white-secondary) 5px, var(--white-secondary) 50px);
+    }
+ }

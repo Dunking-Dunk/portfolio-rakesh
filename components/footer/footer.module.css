@@ -49,3 +49,16 @@
     width: 5rem;
     color: var(--black-primary);
 }
+
+
+@media screen and (max-width: 750px) { 
+    .footer__container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+
+    .footer__right__container  {
+        align-items: flex-start;
+    }
+}

@@ -1,12 +1,15 @@
 "use client"
 import {useState, useEffect} from 'react'
 import styles from './hoverAnimation.module.css'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
-const HoverAnimation = ({ children, hoverTitle }: {
+const HoverAnimation = ({ children, hoverTitle, link }: {
     children: React.ReactNode,
-    hoverTitle?: String
+    hoverTitle?: String,
+    link?: string
 }) => {
+    const router = useRouter()
     const [mouse, setMouse] = useState({
         x: 0,
         y: 0,
@@ -14,10 +17,20 @@ const HoverAnimation = ({ children, hoverTitle }: {
        opacity: 0
     })
 
+    useEffect(() => {
+        const event = window.addEventListener("mousemove", ({clientX, clientY}) => {
+            setMouse((state) => ({ ...state, x: clientX, y: clientY }))
+        })
+       return  () => {
+    window.removeEventListener("mousemove", event!)
+        }
+    }, [])
+
+
     const variants = {
         default: {
-            x: mouse.x - 180 - window.screenX,
-            y: mouse.y - 960 - window.screenY,
+            left: mouse.x,
+            top: mouse.y,
             scale: mouse.scale,
             opacity: mouse.opacity,
         }
@@ -26,23 +39,31 @@ const HoverAnimation = ({ children, hoverTitle }: {
 
 
     return (
-        <motion.div onMouseMove={(e) => {
-            setMouse((state) => ({ ...state, x: e.clientX, y: e.clientY }))
-        }}
+        <AnimatePresence>
+            <motion.div onClick={() => {
+                    if (link) {
+                        router.push(link)
+                    }
+            }}
+            
         onHoverStart={e => {
-            setMouse((state) => ({ ...state, scale: 1.5, opacity: 1 }))
-         }}
+            setMouse((state) => ({ ...state, scale: 1.5, opacity: 1.5 }))
+            }}
+            
            onHoverEnd={e => {
                setMouse((state) => ({ ...state, scale: 0, opacity: 0 }))
             }}
-            
         >
             
             {children}
-            <motion.div className={styles.hover} animate='default' variants={variants} >
+            <motion.div className={styles.hover} animate='default' variants={variants} transition={{
+                ease: 'linear'
+            }} >
                 <p className={styles.hover__text}>{hoverTitle ? hoverTitle : 'hover'}</p>
             </motion.div>
         </motion.div>
+        </AnimatePresence>
+        
     )
 }
 

@@ -72,7 +72,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;  
+
 }
 
 .hero__img {
@@ -85,4 +85,27 @@
 .row {
     display: flex;
     gap: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    .hero {
+        height: 100%;
+    }
+    .hero__container {
+        padding: 5rem 0rem 10rem 0rem;
+       display: flex;
+       flex-direction: column;
+    gap: 3rem
+    }
+
+    .hero__cards {
+        margin-top: 0;
+    }
+    .card {
+        padding: 0 5rem;
+    }
+
+    .hero__img {
+        height: 50rem;
+    }
 }

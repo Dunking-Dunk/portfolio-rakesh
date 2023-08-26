@@ -12,6 +12,7 @@ export default function Button({
         color?: string,
         background?: string,
         borderColor?: string
+
     }) {
     const router = useRouter()
     return (<AnimatePresence>
